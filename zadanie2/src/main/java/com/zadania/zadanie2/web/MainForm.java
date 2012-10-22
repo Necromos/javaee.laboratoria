@@ -8,16 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-/*
- * zajęcia 2 (3+3)
- * -pobieranie danych z formularza (zwłaszcza pola multiwyboru)
- * 		stworzyć dwie strony: 	1) wypełniamy formularz
- * 								2) odpowiedź po wypełnieniu
- * -zabawa z sesjami i application context
- * 		napisać zestaw stron demonstrujący działania pow.
- * 
- * 
- */
+
 @WebServlet(urlPatterns="/form")
 public class MainForm extends HttpServlet {
 
@@ -28,10 +19,32 @@ public class MainForm extends HttpServlet {
 			throws ServletException, IOException {
 		
 		response.setContentType("text/html");
+		response.setCharacterEncoding("utf-8");
 		
 		PrintWriter out = response.getWriter();
-		out.println("Hello World!");
+		out.println("<html><head></head><body>");
+		if (request.getParameter("act") != null && request.getParameter("act").equals("reg")){
+			out.println("<form action='' method='post'>" +
+					"<input name='imie' type='text' />" +
+					"" +
+					"<br /><input name='sub' value='Wyślij' type='submit' />" +
+					"</form>");
+					
+		}
+		else {
+			out.println("blah" +
+					"" +
+					"" +
+					"");
+		}
+		out.println("</body></html>");
 		out.close();
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		
 	}
 	
 }
