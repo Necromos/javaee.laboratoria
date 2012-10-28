@@ -34,7 +34,6 @@ public class MainForm extends HttpServlet {
 		
 		
 		HttpSession session = request.getSession();
-		session = request.getSession();
 		if (session.getAttribute("log") == null) {
 			session.setAttribute("log", new Log());
 		}
