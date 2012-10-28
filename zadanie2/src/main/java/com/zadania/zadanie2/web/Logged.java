@@ -42,7 +42,7 @@ public class Logged extends HttpServlet {
 					"<a href='?act=wyl'>Wyloguj</a>");
 		}
 		else {
-			out.println("Błąd<br /><a href='/'>Powrót</a>");
+			out.println("Błąd<br /><a href='zadanie2'>Powrót</a>");
 		}
 		out.println("</body></html>");
 		out.close();
