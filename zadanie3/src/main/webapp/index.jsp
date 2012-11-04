@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<form action="form.jsp" method="post">
-			<input type="text" name="nick" />
+			Nick: <input type="text" name="nick" /><br />
 			Który z smakołyków jest najlepszy?:<br />
 			<input type="radio" name="jd" value="ciastko" />Ciastko<br />
 			<input type="radio" name="jd" value="karmel" />Karmel<br />

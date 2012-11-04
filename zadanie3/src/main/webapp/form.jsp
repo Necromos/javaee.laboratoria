@@ -8,6 +8,8 @@
 		<title>pkrolik - test jsp - form</title>
 	</head>
 	<body>
-		<%=request.getParameter("nick") %>
+		Witaj <%=request.getParameter("nick") %>!<br />
+		Czy to Ty lubisz<% for (String smak : request.getParameterValues("jd")) out.println(" " + smak);%> ?<br />
+		Oraz posiadasz<% for (String pos : request.getParameterValues("bel")) out.println(" " + pos); %> ?
 	</body>
 </html>
